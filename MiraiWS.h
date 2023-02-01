@@ -1,9 +1,9 @@
 #pragma once
 
-EXTERN_C_START
-
 #include <Windows.h>
 #include <WinHttp.h>
+
+EXTERN_C_START
 
 #define MIRAI_WS_MAXBUF (1LL << 16)
 

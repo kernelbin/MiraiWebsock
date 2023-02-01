@@ -909,10 +909,9 @@ static void CALLBACK WinHttpStatusCallback(
                 &eBufferType);
             if (dwRet != NO_ERROR)
             {
-                CleanUpMiraiWSAsync(pMiraiWS);
-
                 MWS_NWERRORINFO Info = { dwRet };
                 pMiraiWS->Callback(pMiraiWS, MWS_NWERROR, &Info);
+                CleanUpMiraiWSAsync(pMiraiWS);
             }
         }
         break;
@@ -947,10 +946,9 @@ static void CALLBACK WinHttpStatusCallback(
                 &eBufferType);
             if (dwRet != NO_ERROR)
             {
-                CleanUpMiraiWSAsync(pMiraiWS);
-
                 MWS_NWERRORINFO Info = { dwRet };
                 pMiraiWS->Callback(pMiraiWS, MWS_NWERROR, &Info);
+                CleanUpMiraiWSAsync(pMiraiWS);
             }
         }
         Sleep(0);
@@ -960,7 +958,6 @@ static void CALLBACK WinHttpStatusCallback(
     case WINHTTP_CALLBACK_STATUS_REQUEST_ERROR:
     {
         WINHTTP_ASYNC_RESULT* pResult = lpvStatusInformation;
-        CleanUpMiraiWSAsync(pMiraiWS);
         switch (pResult->dwResult)
         {
         case API_SEND_REQUEST:
@@ -972,13 +969,12 @@ static void CALLBACK WinHttpStatusCallback(
         }
         default:
         {
-            CleanUpMiraiWSAsync(pMiraiWS);
-
             MWS_NWERRORINFO Info = { pResult->dwError };
             pMiraiWS->Callback(pMiraiWS, MWS_NWERROR, &Info);
             break;
         }
         }
+        CleanUpMiraiWSAsync(pMiraiWS);
         break;
     }
     case WINHTTP_CALLBACK_STATUS_HANDLE_CLOSING:
