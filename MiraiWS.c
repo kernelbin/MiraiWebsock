@@ -1080,7 +1080,7 @@ BOOL ConnectMiraiWS(_Inout_ PMIRAI_WS pMiraiWS, _In_z_ LPCWSTR szVerifyKey, _In_
             NULL,
             WINHTTP_NO_REFERER,
             WINHTTP_DEFAULT_ACCEPT_TYPES,
-            0);
+            pMiraiWS->bSecure ? WINHTTP_FLAG_SECURE : 0);
         if (!pMiraiWS->hRequestHandle)
             __leave;
 
