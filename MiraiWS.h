@@ -206,7 +206,7 @@ PMIRAI_WS CreateMiraiWS(_In_z_ LPCWSTR lpServerName, _In_ INTERNET_PORT Port, _I
 BOOL ConnectMiraiWS(_Inout_ PMIRAI_WS pMiraiWS, _In_z_ LPCWSTR szVerifyKey, _In_z_ LPCWSTR szQQ);
 
 /// <summary>
-/// Destroy a instance of mirai websocket, asynchronouslly.
+/// Destroy a instance of mirai websocket, asynchronously.
 /// </summary>
 /// <param name="pMiraiWS">handle created by CreateMiraiWS</param>
 /// <returns>return TRUE on success</returns>
