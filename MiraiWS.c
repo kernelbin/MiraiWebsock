@@ -664,6 +664,196 @@ static BOOL OtherClientMessageUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val*
 {
     return TRUE;
 }
+static BOOL BotOnlineEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL BotOfflineEventActiveUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL BotOfflineEventForceUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL BotOfflineEventDroppedUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL BotReloginEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL FriendInputStatusChangedEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL FriendNickChangedEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL BotGroupPermissionChangeEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL BotMuteEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL BotUnmuteEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL BotJoinGroupEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL BotLeaveEventActiveUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL BotLeaveEventKickUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL BotLeaveEventDisbandUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL GroupRecallEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL FriendRecallEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL NudgeEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL GroupNameChangeEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL GroupEntranceAnnouncementChangeEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL GroupMuteAllEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL GroupAllowAnonymousChatEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL GroupAllowConfessTalkEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL GroupAllowMemberInviteEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL MemberJoinEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL MemberLeaveEventKickUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL MemberLeaveEventQuitUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL MemberCardChangeEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL MemberSpecialTitleChangeEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL MemberPermissionChangeEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL MemberMuteEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL MemberUnmuteEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL MemberHonorChangeEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL NewFriendRequestEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL MemberJoinRequestEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL BotInvitedJoinGroupRequestEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL OtherClientOnlineEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL OtherClientOfflineEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL CommandExecutedEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
 
 static void CallBadMsgCallback(_In_ PMIRAI_WS pMiraiWS)
 {
@@ -699,10 +889,98 @@ static BOOL EventsUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
     }
 
     // TODO: Use something to optimize this, perhaps trie tree?
-    LPCSTR TypeList[] = 
-    { "FriendMessage",       "GroupMessage",       "TempMessage",       "StrangerMessage",       "OtherClientMessage" };
-    EVENTHANDLER EventPackerList[] = 
-    { FriendMessageUnpacker, GroupMessageUnpacker, TempMessageUnpacker, StrangerMessageUnpacker, OtherClientMessageUnpacker };
+    LPCSTR TypeList[] = {
+        "FriendMessage",
+        "GroupMessage",
+        "TempMessage",
+        "StrangerMessage",
+        "OtherClientMessage",
+        
+        "BotOnlineEvent",
+        "BotOfflineEventActive",
+        "BotOfflineEventForce",
+        "BotOfflineEventDropped",
+        "BotReloginEvent",
+        "FriendInputStatusChangedEvent",
+        "FriendNickChangedEvent",
+        "BotGroupPermissionChangeEvent",
+        "BotMuteEvent",
+        "BotUnmuteEvent",
+        "BotJoinGroupEvent",
+        "BotLeaveEventActive",
+        "BotLeaveEventKick",
+        "BotLeaveEventDisband",
+        "GroupRecallEvent",
+        "FriendRecallEvent",
+        "NudgeEvent",
+        "GroupNameChangeEvent",
+        "GroupEntranceAnnouncementChangeEvent",
+        "GroupMuteAllEvent",
+        "GroupAllowAnonymousChatEvent",
+        "GroupAllowConfessTalkEvent",
+        "GroupAllowMemberInviteEvent",
+        "MemberJoinEvent",
+        "MemberLeaveEventKick",
+        "MemberLeaveEventQuit",
+        "MemberCardChangeEvent",
+        "MemberSpecialTitleChangeEvent",
+        "MemberPermissionChangeEvent",
+        "MemberMuteEvent",
+        "MemberUnmuteEvent",
+        "MemberHonorChangeEvent",
+        "NewFriendRequestEvent",
+        "MemberJoinRequestEvent",
+        "BotInvitedJoinGroupRequestEvent",
+        "OtherClientOnlineEvent",
+        "OtherClientOfflineEvent",
+        "CommandExecutedEvent"
+    };
+    EVENTHANDLER EventPackerList[] =  {
+        FriendMessageUnpacker,
+        GroupMessageUnpacker,
+        TempMessageUnpacker,
+        StrangerMessageUnpacker,
+        OtherClientMessageUnpacker,
+
+        BotOnlineEventUnpacker,
+        BotOfflineEventActiveUnpacker,
+        BotOfflineEventForceUnpacker,
+        BotOfflineEventDroppedUnpacker,
+        BotReloginEventUnpacker,
+        FriendInputStatusChangedEventUnpacker,
+        FriendNickChangedEventUnpacker,
+        BotGroupPermissionChangeEventUnpacker,
+        BotMuteEventUnpacker,
+        BotUnmuteEventUnpacker,
+        BotJoinGroupEventUnpacker,
+        BotLeaveEventActiveUnpacker,
+        BotLeaveEventKickUnpacker,
+        BotLeaveEventDisbandUnpacker,
+        GroupRecallEventUnpacker,
+        FriendRecallEventUnpacker,
+        NudgeEventUnpacker,
+        GroupNameChangeEventUnpacker,
+        GroupEntranceAnnouncementChangeEventUnpacker,
+        GroupMuteAllEventUnpacker,
+        GroupAllowAnonymousChatEventUnpacker,
+        GroupAllowConfessTalkEventUnpacker,
+        GroupAllowMemberInviteEventUnpacker,
+        MemberJoinEventUnpacker,
+        MemberLeaveEventKickUnpacker,
+        MemberLeaveEventQuitUnpacker,
+        MemberCardChangeEventUnpacker,
+        MemberSpecialTitleChangeEventUnpacker,
+        MemberPermissionChangeEventUnpacker,
+        MemberMuteEventUnpacker,
+        MemberUnmuteEventUnpacker,
+        MemberHonorChangeEventUnpacker,
+        NewFriendRequestEventUnpacker,
+        MemberJoinRequestEventUnpacker,
+        BotInvitedJoinGroupRequestEventUnpacker,
+        OtherClientOnlineEventUnpacker,
+        OtherClientOfflineEventUnpacker,
+        CommandExecutedEventUnpacker
+    };
 
     const LPCSTR szType = unsafe_yyjson_get_str(TypeField);
     for (SIZE_T i = 0; i < _countof(TypeList); i++)
