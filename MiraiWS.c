@@ -376,16 +376,28 @@ static BOOL ConstructMessageBlock(_Out_ MESSAGE_BLOCK *pBlock, _In_ LPCSTR lpTyp
     else if (strcmp(lpType, "FlashImage") == 0)
     {
         pBlock->Type = MB_IMAGE;
+        yyjson_val* ImageIDField = yyjson_obj_get(Node, "imageId");
         yyjson_val* UrlField = yyjson_obj_get(Node, "url");
-        if (!UrlField || !yyjson_is_str(UrlField))
+        yyjson_val* ImageTypeField = yyjson_obj_get(Node, "imageType");
+        yyjson_val* IsEmojiField = yyjson_obj_get(Node, "isEmoji");
+
+        if (!ImageIDField || !yyjson_is_str(ImageIDField) ||
+            !UrlField || !yyjson_is_str(UrlField) ||
+            !ImageTypeField || !yyjson_is_str(ImageTypeField) ||
+            !IsEmojiField || !yyjson_is_bool(IsEmojiField))
             return FALSE;
 
+        LPWSTR CopiedImageID = StrUtf8ToWide(yyjson_get_str(ImageIDField), -1, NULL);
         LPWSTR CopiedUrl = StrUtf8ToWide(yyjson_get_str(UrlField), -1, NULL);
-        if (!CopiedUrl)
+        LPWSTR CopiedImageType = StrUtf8ToWide(yyjson_get_str(ImageTypeField), -1, NULL);
+        if (!CopiedImageID || !CopiedUrl || !CopiedImageType)
             return FALSE;
 
         pBlock->Image.IsFlash = TRUE;
+        pBlock->Image.ImageIDStr = CopiedImageID;
         pBlock->Image.URL = CopiedUrl;
+        pBlock->Image.ImageType = CopiedImageType;
+        pBlock->Image.IsEmoji = (BOOL)yyjson_get_bool(IsEmojiField);
     }
     else if (strcmp(lpType, "Voice") == 0)
     {
