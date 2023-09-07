@@ -664,6 +664,27 @@ static BOOL OtherClientMessageUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val*
 {
     return TRUE;
 }
+
+static BOOL FriendSyncMessageUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL GroupSyncMessageUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL TempSyncMessageUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
+static BOOL StrangerSyncMessageUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
+{
+    return TRUE;
+}
+
 static BOOL BotOnlineEventUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
 {
     return TRUE;
@@ -895,7 +916,11 @@ static BOOL EventsUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
         "TempMessage",
         "StrangerMessage",
         "OtherClientMessage",
-        
+        "FriendSyncMessage",
+        "GroupSyncMessage",
+        "TempSyncMessage",
+        "StrangerSyncMessage",
+
         "BotOnlineEvent",
         "BotOfflineEventActive",
         "BotOfflineEventForce",
@@ -941,6 +966,10 @@ static BOOL EventsUnpacker(_In_ PMIRAI_WS pMiraiWS, _In_ yyjson_val* DataField)
         TempMessageUnpacker,
         StrangerMessageUnpacker,
         OtherClientMessageUnpacker,
+        FriendSyncMessageUnpacker,
+        GroupSyncMessageUnpacker,
+        TempSyncMessageUnpacker,
+        StrangerSyncMessageUnpacker,
 
         BotOnlineEventUnpacker,
         BotOfflineEventActiveUnpacker,
